@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+html{font-size: 100%}
+body {background-color:#eaf6fd;line-height: 1.7;}
+a{text-decoration: none}
+img{max-width: 100%}
+@font-face{font-family:SourceHanSerifTW-VF;src: url('SourceHanSerifTW-VF.otf.woff2') format('woff2');}
+body {font-family: 'SourceHanSerifTW-VF', sans-serif;}
+#big{background-image: linear-gradient(#a0d9da,#A0C8DA);}
+
+
+/*header-----*/
+.main-nav{display: flex;font-size:1.25rem;margin-top: 34px;list-style: none;margin-right: 20px}
+.main-nav li{margin-left: 36px}
+.main-nav a{color: #245d77;}
+.main-nav a:hover{color: #000000}
+.c{display: flex;justify-content: space-between;padding-left:10px;margin: 10px}
+header h1 {font-size:1.25rem}
+.logo{width: 100px;margin-top: 14px }
+
+/*item------*/
+.grid{display: grid;gap:40px;grid-template-columns: repeat(auto-fit ,minmax(240px,1fr));margin-top: 6%;margin-bottom: 50px}
+.b h3 {background-color: #ffffff;padding: 10px;text-align: center;border-style: solid;border-color:#245d77}
+
+
+/*頁尾------*/
+footer{background: #170a6c;text-align-last: center;padding: 1px 0;}
+footer p{color: #eaf6fd; font-size: 0.875rem}
+.wrapper{max-width: 1100px;margin:0 auto;padding: 0 4%}
+.item img{max-width: 300px;max-height: 500px;width: 100%;height: auto}

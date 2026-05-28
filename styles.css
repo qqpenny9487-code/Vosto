@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+/*共通部分-------*/
+html{font-size: 100%}
+body {background-color:#eaf6fd;line-height: 1.7;}
+a{text-decoration: none}
+img{max-width: 100%}
+@font-face{font-family:SourceHanSerifTW-VF;src: url('SourceHanSerifTW-VF.otf.woff2') format('woff2');}
+body {font-family: 'SourceHanSerifTW-VF', sans-serif;}
+
+
+/*header-----*/
+.logo{width: 100px;margin-top: 14px }
+.main-nav{display: flex;font-size:1.25rem;margin-top: 34px;list-style: none}
+.main-nav li{margin-left: 36px}
+.main-nav a{color: #245d77}
+.main-nav a:hover{color: #000000}
+.age{display: flex;justify-content: space-between;}
+header h1 {font-size:1.25rem}
+.wrapper{max-width: 1100px;margin:0 auto;padding: 0 4%}
+
+/*home------*/
+#big{background-image: linear-gradient(#a0d9da,#A0C8DA);}
+.home{text-align: center;margin-top: 10px}
+.home p {font-size: 1.125rem;margin: 10px 0 42px}
+.home h3{font-size: 2rem;font-family: serif;text-transform: uppercase;font-weight: normal} 
+
+/*標題------*/
+.page-title{font-size: 3rem;font-family: serif;
+    text-transform: uppercase;font-weight: normal}
+
+/*按鈕------*/
+.button{font-size:1.375rem;background-color: rgb(188, 231, 255);
+    color: darkslateblue;border-radius: 5px;padding: 18px 32px}
+.button:hover{background-color: darkslateblue ;color: #eaf6fd}
+
+/*頁尾------*/
+footer{background: #170a6c;text-align-last: center;padding: 1px 0;}
+footer p{color: #eaf6fd; font-size: 0.875rem}
+
+/*主要區域-------*/
+article{background-color: #a0d8e0;height:auto;width: 74%;border-radius: 10px;padding:0 10px;}
+
+/*邊欄--------*/
+aside{width: 22%}
+.sub{font-size: 1.375rem; padding: 0 8px 8px; border-bottom: 2px #A0C8DA solid; font-weight: normal;}
+.a{border-bottom: 1px #ddd solid;color: darkslateblue;padding:10px;display: block;border-radius: 5px;margin-bottom: 5px;}
+.a:hover{background:#a0d8e0 }
+.news{text-align: center;display: flex;justify-content: space-between;margin:10px auto}
+
+/*聯絡方式*/
+#sns{background: #FAF7F0;padding: 4% 0;}
+#sns .wrapper{display: flex;justify-content: space-around;gap: 10px}
+#sns .sub-title{margin-bottom: 30px;border-bottom: 2px #0bd solid;}
+.sns-box{width: 30%;}
+
+@media(max-width:600px)
+{#sns .wrapper {flex-direction: column;}.sns box{width: 100%;margin-bottom: 30px}}
+
+
+/*角色介紹*/
+
+input[type="radio"] {display: none;}/*先把預設的圓圈圈 radio 隱藏掉 */
+.content {display: none;padding: 20px;border: 5px solid #A0C8DA;}/*預設隱藏所有內容區塊 */
+#tab1:checked ~ .content1,#tab2:checked ~ .content2,#tab3:checked ~ .content3 {display:grid;}/*當對應的 radio 被選中時，顯示對應的內容 */
+label {padding: 10px 20px;background: #eee;cursor: pointer;display: inline-block;margin-top: 30px;}/*加樣式讓它像按鈕 */
+#tab1:checked ~ .nav label[for="tab1"],#tab2:checked ~ .nav label[for="tab2"],#tab3:checked ~ .nav label[for="tab3"] 
+{background: #3498db;color: white;}/*按鈕被選中時，改變按鈕顏色 */
+
+.content {gap:26px;grid-template-columns: repeat(auto-fit ,minmax(240px,1fr));margin-top: 6%;margin-bottom: 50px}
+.content img{width: 70%;object-fit: cover;display: block;}
+.nav{text-align-last: center;}
+
+/*角色卡*/
+#oc-card .modal-box{position: fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.7);display:flex;
+    justify-content:center;align-items:center;opacity:0;pointer-events: none;transition:opacity 0.3 ease;}
+#oc-card .modal-content{background: white;border-radius: 10px;padding: 30px;max-width: 600px;width: 90%;position: relative;
+    overflow-y: scroll;height: 87vh;}
+#oc-card .modal-box:target {opacity: 1;pointer-events: auto;}
+#oc-card .close-btn {position: absolute;top: 10px;right: 15px;font-size: 28px;text-decoration: none;color: #333;}
+
+.grid{border-style:ridge;text-align: center}
+.grid img{display:inline}
+
+/*查看細項*/
+.toggle-input {display: none;}
+.toggle-label {display: block;background: #333;color: #fff;padding: 8px 12px;cursor: pointer;border-radius: 4px;text-align: center;}
+.toggle-content {max-height: 0;overflow: hidden;transition: max-height 0.3s ease;background: #eee;padding: 0 10px;}
+.toggle-input:checked ~ .toggle-content {max-height: 20rem; padding: 10px;overflow-y: scroll;height: 100vh;}
+body:has(.toggle-input:checked ~ .toggle-content) {margin: 0;padding: 0;height: 100%;overflow: hidden;}
+
+
+.a-head{text-align-last: center;background-image: linear-gradient(#a0d9da,#A0C8DA);border-radius: 5px;
+    margin:25px 10%;padding: 5px 0;font-weight: normal}
+.s {width: 50%;height: auto;text-align-last: center;text-decoration: none; margin:10px auto;padding: 2px 10%;background-color: aliceblue;border-radius: 5px}
+#a a{text-decoration: none;margin: 0 15px}
+
+/*其他故事*/
+.g{display: flex;grid-template-columns:1fr 1fr;gap:30px;max-width: 1000px;margin: 10% auto;padding: 10px 25px}
+
+.b{background-color: #a0d9da;margin: 5px auto;padding: 20px;border-radius: 5px;max-width: 1000px}
+.b h3 {background-color: #ffffff;padding: 10px;text-align: center;border-style: solid;border-color:#245d77}
+.line{display: block; border-bottom: 2px solid #a0d9da}
+#a{width: 1000px;height: auto}
+#title{text-align-last: center;}
+.toggle-box p {text-indent: 2em;}
+.q{border-style:ridge;text-indent: 2em;padding:10% 15%}

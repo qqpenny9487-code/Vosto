@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+html{scroll-behavior: smooth;background-color:rgba(231, 240, 247, 0.61)}
+page-c {scroll-behavior: smooth;}
+
+/*定義字型*/
+@font-face{font-family:SourceHanSerifTW-VF;src: url('SourceHanSerifTW-VF.otf.woff2') format('woff2');}
+body {font-family: 'SourceHanSerifTW-VF', sans-serif;line-height: 1.7;text-align: justify;letter-spacing: 2px;}
+
+.page-c{height: 100vh; overflow-y: scroll;scroll-snap-type:y proximity;
+    scroll-padding-top: 80px;max-width: 500px;margin:0 auto;padding: 0 4%}
+.article-box{flex:1;scroll-snap-align: start; padding: 40px;
+    background-color:rgb(203, 224, 234);text-align: justify;overflow-wrap: break-word}
+p {text-indent: 2em;}
+h1{font-family:serif}
+h2{font-family: serif}
+.a-head{text-align-last: center;background-image: linear-gradient(#a0d9da,#A0C8DA);border-radius: 5px;
+    margin:25px 10%;padding: 5px 0;font-weight: normal}
+.s {width: 50%;height: auto;text-align-last: center;text-decoration: none; margin:10px auto;padding: 2px 10%;background-color: aliceblue;border-radius: 5px}
+#a a{text-decoration: none;margin: 0 15px}
+footer{background: #170a6c;text-align-last: center;padding: 1px 0;}
+footer p{color: #eaf6fd; font-size: 0.875rem}
+#b a{text-decoration: none}
+::-webkit-scrollbar {width: 10px;}
+::-webkit-scrollbar-thumb {background: rgba(160, 200, 218, 0.41);}
+::-webkit-scrollbar-track {background: rgba(56, 104, 116, 0);}
+
+#oc-card .modal-box{position: fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.7);display:flex;
+    justify-content:center;align-items:center;opacity:0;pointer-events: none;transition:opacity 0.3 ease;}
+#oc-card .modal-content{background: white;border-radius: 10px;padding: 30px;max-width: 600px;width: 90%;position: relative;
+    overflow-y: scroll;height: 87vh;}
+#oc-card .modal-box:target {opacity: 1;pointer-events: auto;}
+#oc-card .close-btn {position: absolute;top: 10px;right: 15px;font-size: 28px;text-decoration: none;color: #333;}
+.toggle-input {display: none;}
+.toggle-label {display: block;background: #333;color: #fff;padding: 8px 12px;cursor: pointer;border-radius: 4px;text-align: center;}
+.toggle-content {max-height: 0;overflow: hidden;transition: max-height 0.3s ease;background: #eee;padding: 0 10px;}
+.toggle-input:checked ~ .toggle-content {max-height: 20rem; padding: 10px;overflow-y: scroll;height: 100vh;}
+body:has(.toggle-input:checked ~ .toggle-content) {margin: 0;padding: 0;height: 100%;overflow: hidden;}

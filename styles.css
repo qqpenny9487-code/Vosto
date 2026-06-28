@@ -7,7 +7,7 @@ a{text-decoration: none}
 img{max-width: 100%}
 @font-face{font-family:SourceHanSerifTW-VF;src: url('SourceHanSerifTW-VF.otf.woff2') format('woff2');}
 body {font-family: 'SourceHanSerifTW-VF', sans-serif;}
-
+html {scroll-behavior: smooth;}
 
 /*header-----*/
 .logo{width: 100px;margin-top: 14px }
@@ -79,16 +79,17 @@ label {padding: 10px 20px;background: #eee;cursor: pointer;display: inline-block
 #oc-card .modal-box:target {opacity: 1;pointer-events: auto;}
 #oc-card .close-btn {position: absolute;top: 10px;right: 15px;font-size: 28px;text-decoration: none;color: #333;}
 
-.grid{border-style:ridge;text-align: center}
-.grid img{display:inline}
+.grid{border-style:ridge;text-align: center;border-radius: 10px}
+.grid img{display:inline;padding-top: 10px}
 
 /*查看細項*/
 .toggle-input {display: none;}
 .toggle-label {display: block;background: #333;color: #fff;padding: 8px 12px;cursor: pointer;border-radius: 4px;text-align: center;}
 .toggle-content {max-height: 0;overflow: hidden;transition: max-height 0.3s ease;background: #eee;padding: 0 10px;}
 .toggle-input:checked ~ .toggle-content {max-height: 20rem; padding: 10px;overflow-y: scroll;height: 100vh;}
-body:has(.toggle-input:checked ~ .toggle-content) {margin: 0;padding: 0;height: 100%;overflow: hidden;}
-
+body::-webkit-scrollbar {width: 10px;}
+body::-webkit-scrollbar-thumb {background: rgba(160, 200, 218, 0.41);}
+body::-webkit-scrollbar-track {background: rgba(56, 104, 116, 0);}
 
 .a-head{text-align-last: center;background-image: linear-gradient(#a0d9da,#A0C8DA);border-radius: 5px;
     margin:25px 10%;padding: 5px 0;font-weight: normal}

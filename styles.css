@@ -98,6 +98,9 @@ body::-webkit-scrollbar-track {background: rgba(56, 104, 116, 0);}
 
 /*其他故事*/
 .g{display: flex;grid-template-columns:1fr 1fr;gap:30px;max-width: 1000px;margin: 10% auto;padding: 10px 25px}
+@media(max-width:800px)
+{.g{display: grid;grid-template-columns:1fr 1fr;gap:30px;max-width: 1000px;margin: 10% auto;padding: 10px 25px}}
+
 
 .b{background-color: #a0d9da;margin: 5px auto;padding: 20px;border-radius: 5px;max-width: 1000px}
 .b h3 {background-color: #ffffff;padding: 10px;text-align: center;border-style: solid;border-color:#245d77}
@@ -106,3 +109,5 @@ body::-webkit-scrollbar-track {background: rgba(56, 104, 116, 0);}
 #title{text-align-last: center;}
 .toggle-box p {text-indent: 2em;}
 .q{border-style:ridge;text-indent: 2em;padding:10% 15%}
+
+#docs{background-color: #eaf6fd;padding: 30px;border-radius: 10px 30px;border-style:solid;border-color:#7e7e36}

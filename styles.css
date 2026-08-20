@@ -55,7 +55,7 @@ aside{width: 22%}
 .sns-box{width: 30%;}
 
 @media(max-width:600px)
-{#sns .wrapper {flex-direction: column;}.sns box{width: 100%;margin-bottom: 30px}}
+{#sns .wrapper {flex-direction: column;}.sns box{width: 100%;margin-bottom: 30px};}
 
 
 /*角色介紹*/
@@ -75,9 +75,11 @@ label {padding: 10px 20px;background: #eee;cursor: pointer;display: inline-block
 #oc-card .modal-box{position: fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.7);display:flex;
     justify-content:center;align-items:center;opacity:0;pointer-events: none;transition:opacity 0.3 ease;}
 #oc-card .modal-content{background: white;border-radius: 10px;padding: 30px;max-width: 600px;width: 90%;position: relative;
-    overflow-y: scroll;height: 87vh;}
+    overflow-y: scroll;height:auto;}
 #oc-card .modal-box:target {opacity: 1;pointer-events: auto;}
 #oc-card .close-btn {position: absolute;top: 10px;right: 15px;font-size: 28px;text-decoration: none;color: #333;}
+#oc-card .modal-box .next-left{background-color: #a0d9da;margin-right: 50px}
+#oc-card .modal-box .next-right{background-color: #a0d9da;margin-left: 50px}
 
 .grid{border-style:ridge;text-align: center;border-radius: 10px}
 .grid img{display:inline;padding-top: 10px}
@@ -111,3 +113,12 @@ body::-webkit-scrollbar-track {background: rgba(56, 104, 116, 0);}
 .q{border-style:ridge;text-indent: 2em;padding:10% 15%}
 
 #docs{background-color: #eaf6fd;padding: 30px;border-radius: 10px 30px;border-style:solid;border-color:#7e7e36}
+
+.id-card{padding: 30px;overflow: hidden;}
+.id-card img {float: right; width: 160px;height: auto;display: block;margin-right: 20px; margin-left: 20px;margin-bottom: 20px;}
+.item{display: flex;flex-wrap:wrap;}
+.item p{padding: 5px;margin-left: 10px;margin-top: 0;background-color:rgba(160, 200, 218, 0.18)}
+
+@media (max-width: 700px) 
+{.id-card img {float: none;margin: 0 auto 20px auto;}.item {flex-direction: column;}
+.item p {margin-left: 0;margin-bottom: 10px;} #oc-card .modal-content {width:86vh; height:86vh}}

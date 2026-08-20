@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/*共通部分-------*/
+html{font-size: 100%}
+body {background-color:#eaf6fd;line-height: 1.7;max-width: 1000px;margin:0 auto;padding: 0 4%}
+@font-face{font-family:SourceHanSerifTW-VF;src: url('SourceHanSerifTW-VF.otf.woff2') format('woff2');}
+body {font-family: 'SourceHanSerifTW-VF', sans-serif;}
+html {scroll-behavior: smooth;}
+a{text-decoration: none}
+
+/*header-----*/
+.logo{width: 100px;margin-top: 14px }
+.main-nav{display: flex;font-size:1.25rem;margin-top: 34px;list-style: none}
+.main-nav li{margin-left: 36px}
+.main-nav a{color: #245d77}
+.main-nav a:hover{color: #000000}
+.age{display: flex;justify-content: space-between;}
+header h1 {font-size:1.25rem}
+.wrapper{max-width: 1100px;margin:0 auto;padding: 0 4%}
+#big{background-image: linear-gradient(#a0d9da,#A0C8DA);}
+.home{text-align: center;margin-top: 10px}
+.home p {font-size: 1.125rem;margin: 10px 0 42px}
+.home h3{font-size: 2rem;font-family: serif;text-transform: uppercase;font-weight: normal} 
+aside{width: 22%}
+.sub{font-size: 1.375rem; padding: 0 8px 8px; border-bottom: 2px #A0C8DA solid; font-weight: normal;}
+.a{border-bottom: 1px #ddd solid;color: darkslateblue;padding:10px;display: block;border-radius: 5px;margin-bottom: 5px;}
+.a:hover{background:#a0d8e0 }
+.news{text-align: center;display: flex;justify-content: space-between;margin:10px auto}
+
+#table-1 th{text-align: start;min-width: 100px;font-size: 1.2rem;font-weight:lighter;}
+#table-1 td{text-align: start;min-width: 100px;}
+.c {display:flex;flex-direction: column;align-items: center;max-width:200px;border: ridge;padding: 3px}
+
+article{width: 70%}
+aside{width: 30%}
+.app{text-align-last: center}
+
+footer{background: #170a6c;text-align-last: center;padding: 1px 0;}
+footer p{color: #eaf6fd; font-size: 0.875rem}
+
+/* 基礎外觀 */
+.toc-list a {color: #245d77;font-size: large;display: block}
+.toc-list a:hover{background:#a0d8e0;}
+ul{list-style-type: none}
+.toc-header {display: flex;justify-content:center;align-items: center;margin-bottom: 10px;font-weight: bold;}
+
+/* 1. 把真正的 input 隱藏起來，眼不見為淨 */
+#toc-toggle {display: none;}
+#toc {display: none;}
+/* 2. 設定 label 的游標樣式 */
+.toggle-btn {cursor: pointer;font-size: 0.9rem;font-weight: normal;color: #28880b;}
+
+/* --- 關鍵：利用 :checked 搭配偽元素與兄弟選擇器 --- */
+
+/* 狀況 A：當 input 沒被勾選時（隱藏狀態） */
+#toc-toggle ~ .toc-header .toggle-btn::after {content: "[顯示]";}
+#toc-toggle ~ .toc-list {display: none;}
+
+#toc ~ .toc-header .toggle-btn::after {content: "[顯示]";}
+#toc ~ .toc-list {display: none;}
+/* 狀況 B：當 input 被勾選時（顯示狀態） */
+#toc-toggle:checked ~ .toc-header .toggle-btn::after {content: "[隱藏]";}
+#toc-toggle:checked ~ .toc-list {display: block;}
+
+#toc:checked ~ .toc-header .toggle-btn::after {content: "[隱藏]";}
+#toc:checked ~ .toc-list {display: block;}
+

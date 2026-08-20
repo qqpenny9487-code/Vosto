@@ -2,7 +2,7 @@
 /*定義字型*/
 @font-face{font-family:SourceHanSerifTW-VF;src: url('SourceHanSerifTW-VF.otf.woff2') format('woff2');}
 body {font-family: 'SourceHanSerifTW-VF', sans-serif;}
-body {background-color:#eaf6fd;}
+body {background-color:#eaf6fd;font-size:large}
 
 /*滾軸*/
 ::-webkit-scrollbar {width: 10px;}
